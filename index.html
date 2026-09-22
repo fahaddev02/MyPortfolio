@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syed Fahad Hussain | Senior Android Engineer (6+ Years Exp)</title>
+    <meta name="description" content="Portfolio of Syed Fahad Hussain, Senior Android Developer with 6 years of experience specializing in Kotlin, Jetpack Compose, Clean Architecture, and GitLab CI/CD.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            400: '#4ade80',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            accent: '#7c3aed', // Kotlin purple accent
+                            gitlab: '#fc6d26', // GitLab orange
+                            kotlin: '#7f52ff'
+                        },
+                        darkBg: '#0b0f19',
+                        darkCard: '#111827',
+                        darkBorder: '#1f2937'
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        mono: ['Fira Code', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-brand-500 selection:text-white min-h-screen flex flex-col">
+
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 z-50 backdrop-blur-md bg-slate-950/80 border-b border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Brand / Name -->
+                <a href="#hero" class="flex items-center space-x-3 group">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 via-brand-kotlin to-brand-accent p-0.5 shadow-lg shadow-brand-500/20 group-hover:scale-105 transition-transform">
+                        <div class="w-full h-full bg-slate-950 rounded-[10px] flex items-center justify-center">
+                            <i class="fa-brands fa-android text-emerald-400 text-xl group-hover:rotate-12 transition-transform"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="font-bold text-lg text-slate-100 tracking-tight">Syed Fahad Hussain</span>
+                        <span class="hidden sm:inline-block ml-2 px-2 py-0.5 text-xs font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 rounded-full">6 Yrs Exp</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="text-sm font-medium text-slate-300 hover:text-emerald-400 transition-colors">About</a>
+                    <a href="#skills" class="text-sm font-medium text-slate-300 hover:text-emerald-400 transition-colors">Tech Stack</a>
+                    <a href="#projects" class="text-sm font-medium text-slate-300 hover:text-emerald-400 transition-colors">GitLab Projects</a>
+                    <a href="#experience" class="text-sm font-medium text-slate-300 hover:text-emerald-400 transition-colors">Experience</a>
+                    <a href="#contact" class="px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg hover:from-emerald-600 hover:to-teal-700 shadow-md shadow-emerald-500/20 transition-all hover:scale-[1.02]">Get in Touch</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" aria-label="Toggle Navigation Menu" class="p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile dropdown menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-b border-slate-800 bg-slate-900/95 backdrop-blur-lg px-4 pt-2 pb-4 space-y-3">
+            <a href="#about" class="block text-slate-300 hover:text-emerald-400 font-medium py-1">About</a>
+            <a href="#skills" class="block text-slate-300 hover:text-emerald-400 font-medium py-1">Tech Stack</a>
+            <a href="#projects" class="block text-slate-300 hover:text-emerald-400 font-medium py-1">GitLab Projects</a>
+            <a href="#experience" class="block text-slate-300 hover:text-emerald-400 font-medium py-1">Experience</a>
+            <a href="#contact" class="block text-center text-white bg-emerald-500 hover:bg-emerald-600 font-medium py-2 rounded-lg">Get in Touch</a>
+        </div>
+    </nav>
+
+    <!-- Main Content Container -->
+    <main class="flex-grow">
+        
+        <!-- HERO SECTION -->
+        <section id="hero" class="relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden">
+            <!-- Background Glow Gradients -->
+            <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-emerald-500/10 rounded-full blur-[120px] pointer-events-none"></div>
+            <div class="absolute top-1/3 right-10 w-[400px] h-[300px] bg-brand-kotlin/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    
+                    <!-- Hero Text Content -->
+                    <div class="lg:col-span-7 space-y-6">
+                        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-slate-900 border border-slate-800 text-xs font-medium text-emerald-400 shadow-sm">
+                            <span class="flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                            <span>Available for Senior Android & Lead Roles</span>
+                        </div>
+
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-100 tracking-tight leading-tight">
+                            Hi, I'm <span class="bg-gradient-to-r from-emerald-400 via-teal-300 to-indigo-400 bg-clip-text text-transparent">Syed Fahad Hussain</span>
+                        </h1>
+
+                        <div class="text-xl sm:text-2xl font-semibold text-slate-300 h-10 flex items-center font-mono">
+                            <span class="text-brand-kotlin mr-2">&gt;</span>
+                            <span id="typewriter" class="border-r-2 border-emerald-400 pr-1 animate-pulse">Senior Android Engineer</span>
+                        </div>
+
+                        <p class="text-slate-400 text-base sm:text-lg leading-relaxed max-w-2xl">
+                            Accomplished **Android Engineer with 6+ years of expertise** architecting robust, high-performance mobile applications. Passionate about Kotlin, Jetpack Compose, Clean Architecture, and automated GitLab CI/CD pipelines.
+                        </p>
+
+                        <!-- Key Highlights Pills -->
+                        <div class="flex flex-wrap gap-2 pt-2">
+                            <span class="px-3 py-1 bg-slate-900/90 border border-slate-800 rounded-lg text-xs font-mono text-slate-300 flex items-center gap-1.5">
+                                <i class="fa-solid fa-code text-brand-kotlin"></i> Kotlin First
+                            </span>
+                            <span class="px-3 py-1 bg-slate-900/90 border border-slate-800 rounded-lg text-xs font-mono text-slate-300 flex items-center gap-1.5">
+                                <i class="fa-solid fa-layer-group text-emerald-400"></i> Jetpack Compose
+                            </span>
+                            <span class="px-3 py-1 bg-slate-900/90 border border-slate-800 rounded-lg text-xs font-mono text-slate-300 flex items-center gap-1.5">
+                                <i class="fa-solid fa-cubes text-indigo-400"></i> Clean Arch / MVVM
+                            </span>
+                            <span class="px-3 py-1 bg-slate-900/90 border border-slate-800 rounded-lg text-xs font-mono text-slate-300 flex items-center gap-1.5">
+                                <i class="fa-brands fa-gitlab text-brand-gitlab"></i> GitLab CI/CD
+                            </span>
+                        </div>
+
+                        <!-- CTA Action Buttons -->
+                        <div class="flex flex-wrap items-center gap-4 pt-4">
+                            <a href="https://gitlab.com/fahadappinator" target="_blank" rel="noopener noreferrer" class="px-6 py-3.5 bg-gradient-to-r from-brand-gitlab to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold rounded-xl shadow-lg shadow-orange-500/20 hover:scale-[1.02] transition-all flex items-center gap-2">
+                                <i class="fa-brands fa-gitlab text-lg"></i>
+                                View GitLab Profile
+                            </a>
+                            <a href="#projects" class="px-6 py-3.5 bg-slate-900 hover:bg-slate-800 text-slate-200 font-semibold border border-slate-700 rounded-xl transition-all flex items-center gap-2">
+                                <i class="fa-solid fa-mobile-screen-button text-emerald-400"></i>
+                                Featured Projects
+                            </a>
+                        </div>
+
+                        <!-- Social Quick Links -->
+                        <div class="flex items-center space-x-5 pt-4 text-slate-400">
+                            <a href="https://gitlab.com/fahadappinator" target="_blank" rel="noopener noreferrer" title="GitLab Profile" class="hover:text-brand-gitlab transition-colors text-xl">
+                                <i class="fa-brands fa-gitlab"></i>
+                            </a>
+                            <a href="mailto:fahad.dev02@gmail.com" title="Email Direct (fahad.dev02@gmail.com)" class="hover:text-emerald-400 transition-colors text-xl">
+                                <i class="fa-solid fa-envelope"></i>
+                            </a>
+                            <a href="https://wa.me/923319235315" target="_blank" rel="noopener noreferrer" title="WhatsApp (+92 331 9235315)" class="hover:text-emerald-400 transition-colors text-xl">
+                                <i class="fa-brands fa-whatsapp text-emerald-400"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/syed-fahad-hussain-054ba5176?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" title="LinkedIn Profile" class="hover:text-blue-400 transition-colors text-xl">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Hero Android Device Visual -->
+                    <div class="lg:col-span-5 flex justify-center">
+                        <div class="relative w-full max-w-[340px] group">
+                            <!-- Glowing Aura behind Phone -->
+                            <div class="absolute -inset-1 bg-gradient-to-r from-emerald-500 via-teal-500 to-indigo-500 rounded-[44px] blur-lg opacity-40 group-hover:opacity-75 transition duration-500"></div>
+                            
+                            <!-- Phone Frame Mockup -->
+                            <div class="relative bg-slate-900 border-4 border-slate-800 rounded-[40px] shadow-2xl p-4 overflow-hidden">
+                                <!-- Phone Speaker & Camera Notch -->
+                                <div class="flex justify-center items-center gap-2 mb-3">
+                                    <div class="w-12 h-1.5 bg-slate-800 rounded-full"></div>
+                                    <div class="w-3 h-3 bg-slate-800 rounded-full"></div>
+                                </div>
+
+                                <!-- Screen Content -->
+                                <div class="bg-slate-950 rounded-[28px] p-4 border border-slate-800/80 font-mono text-xs text-slate-300 space-y-3">
+                                    <div class="flex items-center justify-between border-b border-slate-800 pb-2">
+                                        <span class="text-emerald-400 font-bold flex items-center gap-1">
+                                            <i class="fa-brands fa-android text-sm"></i> MainActivity.kt
+                                        </span>
+                                        <span class="text-[10px] text-slate-500">Kotlin 2.0</span>
+                                    </div>
+                                    
+                                    <pre class="overflow-x-auto text-[11px] text-slate-300 leading-relaxed">
+<span class="text-purple-400">@Composable</span>
+<span class="text-blue-400">fun</span> <span class="text-yellow-300">DeveloperPortfolioApp</span>() {
+    <span class="text-blue-400">val</span> engineer = <span class="text-teal-300">AndroidEngineer</span>(
+        name = <span class="text-emerald-300">"Syed Fahad"</span>,
+        expYears = <span class="text-orange-400">6</span>,
+        techStack = <span class="text-yellow-300">listOf</span>(
+            <span class="text-emerald-300">"Kotlin"</span>, 
+            <span class="text-emerald-300">"Jetpack Compose"</span>,
+            <span class="text-emerald-300">"Clean Architecture"</span>
+        )
+    )
+
+    <span class="text-teal-300">AppTheme</span>(darkTheme = <span class="text-blue-400">true</span>) {
+        <span class="text-teal-300">ShowcaseProjects</span>(
+            gitlab = <span class="text-emerald-300">"fahadappinator"</span>
+        )
+    }
+}</pre>
+                                    <div class="pt-2 border-t border-slate-800 flex items-center justify-between text-[11px]">
+                                        <span class="text-emerald-400 font-semibold flex items-center gap-1">
+                                            <i class="fa-solid fa-circle-check"></i> Build Successful
+                                        </span>
+                                        <span class="text-slate-500">GitLab CI PASS</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- STATS & EXPERIENCE HIGHLIGHTS BANNER -->
+        <section id="about" class="py-12 bg-slate-900/60 border-y border-slate-800/80">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                    <div class="p-4 rounded-xl bg-slate-950/50 border border-slate-800">
+                        <div class="text-3xl sm:text-4xl font-extrabold text-emerald-400">6+</div>
+                        <div class="text-sm font-medium text-slate-400 mt-1">Years Android Exp</div>
+                    </div>
+                    <div class="p-4 rounded-xl bg-slate-950/50 border border-slate-800">
+                        <div class="text-3xl sm:text-4xl font-extrabold text-indigo-400">60+</div>
+                        <div class="text-sm font-medium text-slate-400 mt-1">Enterprise Projects Built</div>
+                    </div>
+                    <div class="p-4 rounded-xl bg-slate-950/50 border border-slate-800">
+                        <div class="text-3xl sm:text-4xl font-extrabold text-brand-kotlin">100%</div>
+                        <div class="text-sm font-medium text-slate-400 mt-1">Kotlin Native & Compose</div>
+                    </div>
+                    <div class="p-4 rounded-xl bg-slate-950/50 border border-slate-800">
+                        <div class="text-3xl sm:text-4xl font-extrabold text-amber-400">Private</div>
+                        <div class="text-sm font-medium text-slate-400 mt-1">Company Repositories</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TECHNICAL SKILLS MATRIX -->
+        <section id="skills" class="py-20 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                    <h2 class="text-xs font-mono text-emerald-400 uppercase tracking-widest">Expertise & Competencies</h2>
+                    <h3 class="text-3xl sm:text-4xl font-extrabold text-slate-100">Android Technical Stack</h3>
+                    <p class="text-slate-400">6 years of mastering modern Android development standards, reactive patterns, clean code, and production app deployment.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- Skill Card 1: Core Languages & UI -->
+                    <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-6 hover:border-emerald-500/50 transition-all group">
+                        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 text-2xl mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fa-brands fa-android"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-slate-100 mb-3">Languages & Modern UI</h4>
+                        <ul class="space-y-2.5 text-sm text-slate-300">
+                            <li class="flex items-center justify-between"><span class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-emerald-400"></i> Kotlin & Java</span> <span class="text-xs text-emerald-400 font-mono">Expert</span></li>
+                            <li class="flex items-center justify-between"><span class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-emerald-400"></i> Jetpack Compose UI</span> <span class="text-xs text-emerald-400 font-mono">Expert</span></li>
+                            <li class="flex items-center justify-between"><span class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-emerald-400"></i> Material Design 3</span> <span class="text-xs text-slate-400 font-mono">Advanced</span></li>
+                            <li class="flex items-center justify-between"><span class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-emerald-400"></i> Custom Canvas & Animations</span> <span class="text-xs text-slate-400 font-mono">Advanced</span></li>
+                            <li class="flex items-center justify-between"><span class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-emerald-400"></i> C/C++ (NDK/JNI)</span> <span class="text-xs text-slate-400 font-mono">Proficient</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Skill Card 2: Architecture & Reactive -->
+                    <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-6 hover:border-brand-kotlin/50 transition-all group">
+                        <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-brand-kotlin text-2xl mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-sitemap"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-slate-100 mb-3">Architecture & Asynchronous</h4>
+                        <ul class="space-y-2.5 text-sm text-slate-300">
+                            <li class="flex items-center justify-between"><span class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-brand-kotlin"></i> Clean Architecture</span> <span class="text-xs text-emerald-400 font-mono">Expert</span></li>
+                            <li class="flex items-center justify-between"><span class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-brand-kotlin"></i> MVVM / MVI Patterns</span> <span class="text-xs text-emerald-400 font-mono">Expert</span></li>
+                            <li class="flex items-center justify-between"><span class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-brand-kotlin"></i> Kotlin Coroutines & Flow</span> <span class="text-xs text-emerald-400 font-mono">Expert</span></li>
+                            <li class="flex items-center justify-between"><span class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-brand-kotlin"></i> Multi-Module Architecture</span> <span class="text-xs text-emerald-400 font-mono">Expert</span></li>
+                            <li class="flex items-center justify-between"><span class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-brand-kotlin"></i> RxJava 2/3</span> <span class="text-xs text-slate-400 font-mono">Advanced</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Skill Card 3: Jetpack & DI Frameworks -->
+                    <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-6 hover:border-indigo-500/50 transition-all group">
+                        <div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 text-2xl mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-cubes-stacked"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-slate-100 mb-3">Dependency Injection & Storage</h4>
+                        <ul class="space-y-2.5 text-sm text-slate-300">
+                            <li class="flex items-center justify-between"><span class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-indigo-400"></i> Hilt / Dagger 2</span> <span class="text-xs text-emerald-400 font-mono">Expert</span></li>
+                            <li class="flex items-center justify-between"><span class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-indigo-400"></i> Koin Injection</span> <span class="text-xs text-slate-400 font-mono">Advanced</span></li>
+                            <li class="flex items-center justify-between"><span class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-indigo-400"></i> Room DB & SQLite</span> <span class="text-xs text-emerald-400 font-mono">Expert</span></li>
+                            <li class="flex items-center justify-between"><span class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-indigo-400"></i> DataStore / SharedPreferences</span> <span class="text-xs text-emerald-400 font-mono">Expert</span></li>
+                            <li class="flex items-center justify-between"><span class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-indigo-400"></i> WorkManager</span> <span class="text-xs text-emerald-400 font-mono">Expert</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Skill Card 4: Networking & Security -->
+                    <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-6 hover:border-teal-500/50 transition-all group">
+                        <div class="w-12 h-12 rounded-xl bg-teal-500/10 border border-teal-500/20 flex items-center justify-center text-teal-400 text-2xl mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-network-wired"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-slate-100 mb-3">Networking & API Security</h4>
+                        <ul class="space-y-2.5 text-sm text-slate-300">
+                            <li class="flex items-center justify-between"><span class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-teal-400"></i> Retrofit 2 & OkHttp</span> <span class="text-xs text-emerald-400 font-mono">Expert</span></li>
+                            <li class="flex items-center justify-between"><span class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-teal-400"></i> Ktor Client</span> <span class="text-xs text-slate-400 font-mono">Advanced</span></li>
+                            <li class="flex items-center justify-between"><span class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-teal-400"></i> SSL Pinning & Encryption</span> <span class="text-xs text-emerald-400 font-mono">Expert</span></li>
+                            <li class="flex items-center justify-between"><span class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-teal-400"></i> WebSockets & Push (FCM)</span> <span class="text-xs text-emerald-400 font-mono">Expert</span></li>
+                            <li class="flex items-center justify-between"><span class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-teal-400"></i> GraphQL Client</span> <span class="text-xs text-slate-400 font-mono">Advanced</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Skill Card 5: Testing & QA -->
+                    <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-6 hover:border-amber-500/50 transition-all group">
+                        <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 text-2xl mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-vial-circle-check"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-slate-100 mb-3">Testing & Performance</h4>
+                        <ul class="space-y-2.5 text-sm text-slate-300">
+                            <li class="flex items-center justify-between"><span class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-amber-400"></i> JUnit 5 & Mockk</span> <span class="text-xs text-emerald-400 font-mono">Expert</span></li>
+                            <li class="flex items-center justify-between"><span class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-amber-400"></i> Espresso UI Testing</span> <span class="text-xs text-slate-400 font-mono">Advanced</span></li>
+                            <li class="flex items-center justify-between"><span class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-amber-400"></i> LeakCanary & Profiler</span> <span class="text-xs text-emerald-400 font-mono">Expert</span></li>
+                            <li class="flex items-center justify-between"><span class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-amber-400"></i> App Size Optimization</span> <span class="text-xs text-emerald-400 font-mono">Expert</span></li>
+                            <li class="flex items-center justify-between"><span class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-amber-400"></i> Benchmarking & Baseline Profiles</span> <span class="text-xs text-slate-400 font-mono">Advanced</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Skill Card 6: GitLab & DevOps -->
+                    <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-6 hover:border-brand-gitlab/50 transition-all group">
+                        <div class="w-12 h-12 rounded-xl bg-orange-500/10 border border-orange-500/20 flex items-center justify-center text-brand-gitlab text-2xl mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fa-brands fa-gitlab"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-slate-100 mb-3">DevOps & GitLab CI/CD</h4>
+                        <ul class="space-y-2.5 text-sm text-slate-300">
+                            <li class="flex items-center justify-between"><span class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-brand-gitlab"></i> GitLab CI/CD Pipelines</span> <span class="text-xs text-emerald-400 font-mono">Expert</span></li>
+                            <li class="flex items-center justify-between"><span class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-brand-gitlab"></i> Fastlane Automation</span> <span class="text-xs text-emerald-400 font-mono">Expert</span></li>
+                            <li class="flex items-center justify-between"><span class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-brand-gitlab"></i> Google Play Console</span> <span class="text-xs text-emerald-400 font-mono">Expert</span></li>
+                            <li class="flex items-center justify-between"><span class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-brand-gitlab"></i> Firebase App Distribution</span> <span class="text-xs text-emerald-400 font-mono">Expert</span></li>
+                            <li class="flex items-center justify-between"><span class="flex items-center gap-2"><i class="fa-solid fa-angle-right text-brand-gitlab"></i> Git Branching Strategies</span> <span class="text-xs text-emerald-400 font-mono">Expert</span></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- PRIVATE PRODUCTION APPS SHOWCASE SECTION -->
+        <section id="projects" class="py-20 bg-slate-900/40 border-t border-slate-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                    <div class="space-y-3">
+                        <div class="flex items-center space-x-2">
+                            <i class="fa-solid fa-lock text-amber-400 text-lg"></i>
+                            <h2 class="text-xs font-mono text-amber-400 uppercase tracking-widest">Private Enterprise & Client Apps (26 Production Repos)</h2>
+                        </div>
+                        <h3 class="text-3xl sm:text-4xl font-extrabold text-slate-100">Production Android Applications</h3>
+                        <p class="text-slate-400 max-w-2xl">A curated portfolio of **26 production Android applications** spanning IR Remotes, Data Migration, Live Score, GPS Navigation, AI Voice Translators, CameraX, and Islamic Suites. *All source code is private under NDA.*</p>
+                    </div>
+
+                    <!-- Category Filter Buttons -->
+                    <div class="flex flex-wrap gap-2 mt-6 md:mt-0" id="project-filters">
+                        <button data-filter="all" class="filter-btn active px-3.5 py-2 rounded-xl text-xs font-semibold bg-emerald-500 text-white shadow-md transition-all">All Apps (26)</button>
+                        <button data-filter="utility" class="filter-btn px-3.5 py-2 rounded-xl text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all">Utilities & Tools</button>
+                        <button data-filter="compose" class="filter-btn px-3.5 py-2 rounded-xl text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all">Compose UI & Media</button>
+                        <button data-filter="gps-sensors" class="filter-btn px-3.5 py-2 rounded-xl text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all">GPS, Camera & Sensors</button>
+                        <button data-filter="islamic" class="filter-btn px-3.5 py-2 rounded-xl text-xs font-semibold bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all">Islamic & Audio Suite</button>
+                    </div>
+                </div>
+
+                <!-- Projects Grid Container -->
+                <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- 26 Project Cards dynamically injected via JavaScript -->
+                </div>
+
+                <!-- Enterprise Repo & NDA Banner -->
+                <div class="mt-12 p-6 rounded-2xl bg-gradient-to-r from-slate-900 via-slate-900 to-indigo-950/40 border border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 text-xl">
+                            <i class="fa-solid fa-user-shield"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-100 flex items-center gap-2">
+                                <span>Private Codebases & Technical Interview Demos</span>
+                                <span class="px-2 py-0.5 bg-amber-500/10 text-amber-400 text-[10px] font-mono rounded border border-amber-500/20">26 Private Repos</span>
+                            </h4>
+                            <p class="text-xs text-slate-400">All 26 production Android applications were developed for enterprise clients under strict NDA. Code samples, architecture blueprints, and live app walkthroughs can be demonstrated upon request.</p>
+                        </div>
+                    </div>
+                    <a href="#contact" class="px-5 py-2.5 bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white font-semibold text-xs rounded-xl shadow-lg transition-all flex items-center gap-2 whitespace-nowrap">
+                        <i class="fa-solid fa-comments"></i> Request Technical Walkthrough
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CAREER EXPERIENCE TIMELINE (6 YEARS) -->
+        <section id="experience" class="py-20 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                    <h2 class="text-xs font-mono text-emerald-400 uppercase tracking-widest">Career Progression</h2>
+                    <h3 class="text-3xl sm:text-4xl font-extrabold text-slate-100">6 Years Professional Journey</h3>
+                    <p class="text-slate-400">A timeline of leading mobile engineering teams, scaling Android architecture, and shipping production apps.</p>
+                </div>
+
+                <div class="max-w-4xl mx-auto relative border-l-2 border-slate-800 ml-4 md:ml-auto space-y-12 pl-6 md:pl-8">
+
+                    <!-- Timeline Item 1 -->
+                    <div class="relative group">
+                        <!-- Dot Icon -->
+                        <div class="absolute -left-[31px] md:-left-[39px] top-1 w-6 h-6 rounded-full bg-slate-950 border-2 border-emerald-400 flex items-center justify-center text-emerald-400 group-hover:scale-125 group-hover:bg-emerald-400 group-hover:text-slate-950 transition-all">
+                            <div class="w-2 h-2 rounded-full bg-current"></div>
+                        </div>
+
+                        <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 hover:border-emerald-500/50 transition-all">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                                <div>
+                                    <h4 class="text-xl font-bold text-slate-100">Senior Android Mobile Engineer</h4>
+                                    <p class="text-sm font-medium text-emerald-400">Tech Lead & Architecture Specialist</p>
+                                </div>
+                                <span class="px-3 py-1 bg-slate-800 text-emerald-400 text-xs font-mono rounded-full self-start sm:self-auto">2022 - Present (2+ Yrs)</span>
+                            </div>
+                            <ul class="space-y-2 text-sm text-slate-300 list-disc list-inside">
+                                <li>Architected modular Clean Architecture codebase with Jetpack Compose & Hilt, reducing code debt by 35%.</li>
+                                <li>Designed and configured automated **GitLab CI/CD** pipelines for automated unit testing, static analysis (SonarQube), and Play Store distribution.</li>
+                                <li>Mentored mid-level Android developers, established Kotlin coding standards, and led sprint planning.</li>
+                                <li>Optimized application cold-start performance by 40% using Baseline Profiles and Startup library.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 2 -->
+                    <div class="relative group">
+                        <!-- Dot Icon -->
+                        <div class="absolute -left-[31px] md:-left-[39px] top-1 w-6 h-6 rounded-full bg-slate-950 border-2 border-indigo-400 flex items-center justify-center text-indigo-400 group-hover:scale-125 group-hover:bg-indigo-400 group-hover:text-slate-950 transition-all">
+                            <div class="w-2 h-2 rounded-full bg-current"></div>
+                        </div>
+
+                        <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 hover:border-indigo-500/50 transition-all">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                                <div>
+                                    <h4 class="text-xl font-bold text-slate-100">Mid-Level Android Developer</h4>
+                                    <p class="text-sm font-medium text-indigo-400">Enterprise Mobile Apps</p>
+                                </div>
+                                <span class="px-3 py-1 bg-slate-800 text-indigo-400 text-xs font-mono rounded-full self-start sm:self-auto">2020 - 2022 (2 Yrs)</span>
+                            </div>
+                            <ul class="space-y-2 text-sm text-slate-300 list-disc list-inside">
+                                <li>Migrated legacy Java & XML codebase to 100% pure Kotlin with MVVM and RxJava/Coroutines.</li>
+                                <li>Integrated offline-first synchronization using Room DB, WorkManager, and Retrofit HTTP interceptors.</li>
+                                <li>Implemented high-security biometric authentication, SSL Certificate Pinning, and AES-256 local encryption.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 3 -->
+                    <div class="relative group">
+                        <!-- Dot Icon -->
+                        <div class="absolute -left-[31px] md:-left-[39px] top-1 w-6 h-6 rounded-full bg-slate-950 border-2 border-slate-600 flex items-center justify-center text-slate-400 group-hover:scale-125 group-hover:bg-slate-400 group-hover:text-slate-950 transition-all">
+                            <div class="w-2 h-2 rounded-full bg-current"></div>
+                        </div>
+
+                        <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 hover:border-slate-700 transition-all">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                                <div>
+                                    <h4 class="text-xl font-bold text-slate-100">Android Application Developer</h4>
+                                    <p class="text-sm font-medium text-slate-400">Native App Solutions</p>
+                                </div>
+                                <span class="px-3 py-1 bg-slate-800 text-slate-400 text-xs font-mono rounded-full self-start sm:self-auto">2018 - 2020 (2 Yrs)</span>
+                            </div>
+                            <ul class="space-y-2 text-sm text-slate-300 list-disc list-inside">
+                                <li>Built and deployed multiple native Android applications to Google Play Store.</li>
+                                <li>Integrated third-party APIs, Firebase Push Notifications (FCM), Google Maps SDK, and Payment Gateways.</li>
+                                <li>Collaborated closely with UI/UX designers to implement pixel-perfect responsive layouts.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="py-20 bg-slate-900/60 border-t border-slate-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                    
+                    <div class="lg:col-span-5 space-y-6">
+                        <div class="space-y-3">
+                            <h2 class="text-xs font-mono text-emerald-400 uppercase tracking-widest">Connect With Me</h2>
+                            <h3 class="text-3xl font-extrabold text-slate-100">Let's Build Exceptional Android Apps Together</h3>
+                        </div>
+
+                        <p class="text-slate-400 leading-relaxed">
+                            Whether you need a Senior Android Engineer to lead your mobile product, modernize your Android codebase with Compose, or optimize your GitLab CI/CD workflow, I'm ready to collaborate.
+                        </p>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                            <div class="flex items-center space-x-4 p-4 rounded-xl bg-slate-950/80 border border-slate-800">
+                                <div class="w-10 h-10 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-400 text-lg">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <span class="text-xs text-slate-500 font-mono">Email Address</span>
+                                    <a href="mailto:fahad.dev02@gmail.com" class="text-xs sm:text-sm font-semibold text-emerald-400 hover:underline block truncate">fahad.dev02@gmail.com</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center space-x-4 p-4 rounded-xl bg-slate-950/80 border border-slate-800">
+                                <div class="w-10 h-10 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-400 text-lg">
+                                    <i class="fa-brands fa-whatsapp text-emerald-400"></i>
+                                </div>
+                                <div>
+                                    <span class="text-xs text-slate-500 font-mono">WhatsApp Direct</span>
+                                    <a href="https://wa.me/923319235315" target="_blank" rel="noopener noreferrer" class="text-xs sm:text-sm font-semibold text-emerald-400 hover:underline block">+92 331 9235315</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center space-x-4 p-4 rounded-xl bg-slate-950/80 border border-slate-800">
+                                <div class="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-400 text-lg">
+                                    <i class="fa-brands fa-linkedin"></i>
+                                </div>
+                                <div>
+                                    <span class="text-xs text-slate-500 font-mono">LinkedIn Profile</span>
+                                    <a href="https://www.linkedin.com/in/syed-fahad-hussain-054ba5176?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" class="text-xs sm:text-sm font-semibold text-blue-400 hover:underline block">Syed Fahad Hussain</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center space-x-4 p-4 rounded-xl bg-slate-950/80 border border-slate-800">
+                                <div class="w-10 h-10 rounded-lg bg-brand-gitlab/10 flex items-center justify-center text-brand-gitlab text-lg">
+                                    <i class="fa-brands fa-gitlab"></i>
+                                </div>
+                                <div>
+                                    <span class="text-xs text-slate-500 font-mono">GitLab Profile</span>
+                                    <a href="https://gitlab.com/fahadappinator" target="_blank" rel="noopener noreferrer" class="text-xs sm:text-sm font-semibold text-brand-gitlab hover:underline block">@fahadappinator</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Form -->
+                    <div class="lg:col-span-7">
+                        <form id="contact-form" class="bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-8 space-y-5 shadow-xl">
+                            <h4 class="text-xl font-bold text-slate-100 mb-2">Send a Message</h4>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                <div>
+                                    <label class="block text-xs font-medium text-slate-400 mb-1.5">Your Name</label>
+                                    <input type="text" required placeholder="John Doe" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-200 text-sm focus:outline-none focus:border-emerald-500 transition-colors">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-medium text-slate-400 mb-1.5">Your Email</label>
+                                    <input type="email" required placeholder="john@example.com" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-200 text-sm focus:outline-none focus:border-emerald-500 transition-colors">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-medium text-slate-400 mb-1.5">Subject</label>
+                                <input type="text" required placeholder="Android Project Opportunity" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-200 text-sm focus:outline-none focus:border-emerald-500 transition-colors">
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-medium text-slate-400 mb-1.5">Message</label>
+                                <textarea rows="4" required placeholder="Hi Syed Fahad, I'd like to discuss an Android mobile application..." class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-200 text-sm focus:outline-none focus:border-emerald-500 transition-colors resize-none"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full py-3.5 bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white font-semibold rounded-xl shadow-lg shadow-emerald-500/20 transition-all flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-paper-plane"></i> Send Message
+                            </button>
+
+                            <div id="form-status" class="hidden text-center text-sm font-medium p-3 rounded-xl"></div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 border-t border-slate-800 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center space-x-3">
+                <i class="fa-brands fa-android text-emerald-400 text-lg"></i>
+                <span class="text-sm font-semibold text-slate-300">Syed Fahad Hussain</span>
+                <span class="text-slate-600">•</span>
+                <span class="text-xs text-slate-500">Senior Android Engineer (6+ Yrs Exp)</span>
+            </div>
+            <div class="text-xs text-slate-500 font-mono">
+                Hosted on GitLab Pages &copy; <span id="current-year">2026</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/gitlab-api.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+# GitLab CI/CD Pipeline for Deploying Portfolio to GitLab Pages
+
+image: alpine:latest
+
+pages:
+  stage: deploy
+  script:
+    - mkdir public
+    - cp -r index.html css js public/
+  artifacts:
+    paths:
+      - public
+  only:
+    - main
+    - master
